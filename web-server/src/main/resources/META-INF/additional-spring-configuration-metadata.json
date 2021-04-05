@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "secretKey",
+      "type": "java.lang.String",
+      "description": "Description for secretKey."
+    },
+    {
+      "name": "apiKey",
+      "type": "java.lang.String",
+      "description": "Description for apiKey."
+    }
+  ]
+}
