@@ -27,9 +27,14 @@ public class CoinRestController {
         this.coinRepository = coinRepository;
     }
 
-    @RequestMapping(value = "/api/v1/coins", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/v1/coins", method = RequestMethod.POST)
     public ResponseEntity<?> saveCoins(@RequestBody Coin coin) {
         coinRepository.save(coin);
+        System.out.println(coin);
         return ResponseEntity.ok().build();
+    }
+    @RequestMapping(value = "api/v1/coins", method = RequestMethod.GET)
+    public ResponseEntity<?> coins(){
+        return ResponseEntity.ok(coinRepository.findAll());
     }
 }
