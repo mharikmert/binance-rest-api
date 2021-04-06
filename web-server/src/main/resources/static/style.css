@@ -1,0 +1,17 @@
+body{
+    background-image: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+.container{
+    display: flex;
+    color: white;
+}
+.coin{
+    color: aliceblue;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
