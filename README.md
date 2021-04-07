@@ -119,7 +119,7 @@ symbol | STRING | YES |
 ### Hourly average price
 Average price for a symbol in last hour.
 ```
-GET /api/v3/hourAvg
+GET /api/v1/hourAvg
 ```
 
 **Parameters:**
