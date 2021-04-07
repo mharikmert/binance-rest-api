@@ -10,7 +10,7 @@
 
 ```
 ## Running Locally
-Set your environment variables to application.properties file under the resources as in sample-application.properties file.
+Set your environment variables to ``` application.properties ``` file under the resources such as ``` sample-application.properties``` file.
 
 In the web-server directory you can use run configuration of your IDE
 or you can build a jar and run. 
