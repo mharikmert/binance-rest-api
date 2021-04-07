@@ -8,22 +8,21 @@ const showData = async (url,coin) => {
     console.log(data);
     document.querySelector('#' + coin).textContent = data['price'];
 
-    postData('api/v1/coins', data)
+    postData('api/v1/subCoins', data)
     .then(data => console.log(JSON.stringify(data)))
     .catch(error => console.log(error))
 
+    //time period for data flow
     setTimeout( () => showData(url,coin),1000);
 }
 
 const postData = (url = '', data = {}) => {
+    //post request
     return fetch(url, {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data),
-    })
-        .then(response => response.json()); // parses JSON response into native JavaScript objects
+    }).then(response => response.json());
 }
 //showData(url, 'USDT')
 //showData(url, 'TRY')
