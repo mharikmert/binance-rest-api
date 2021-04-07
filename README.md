@@ -1,7 +1,7 @@
 # Binance Rest API
 ## General API Information
 - This is a simple rest api that fetches data from public endpoints of https://api.binance.com and manipulate these data for different purposes.   
-- The base endpoint is:
+- The base endpoint for  this project is: http://localhost:8080
 - All endpoints return either a JSON object or array.
 
 ## Installation
