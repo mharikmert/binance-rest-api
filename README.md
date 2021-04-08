@@ -21,8 +21,9 @@ or you can build a jar and run.
 ~/binance-rest-api/web-server/build/libs$ java -jar app-0.0.1.SNAPSHOT.jar
 ```
 
-In the client directory you can run the react app
+In the client directory you can install modules and run the react app
 ```
+~/binance-rest-api/client$ npm install
 ~/binance-rest-api/client$ npm start
 ```
 
@@ -38,29 +39,31 @@ GET /api/v1/fetchAll
 ```
 **Response:**
 ```javascript
-{
-"symbol": "ETHBTC",
-"price": "0.03508800"
-},
-{
-"symbol": "LTCBTC",
-"price": "0.00387100"
-},
-{
-"symbol": "BNBBTC",
-"price": "0.00663030"
-},
-{
-"symbol": "NEOBTC",
-"price": "0.00106600"
-},
-{
-"symbol": "QTUMETH",
-"price": "0.00822000"
-},
-.
-.
-.
+[
+   {
+   "symbol": "ETHBTC",
+   "price": "0.03508800"
+   },
+   {
+   "symbol": "LTCBTC",
+   "price": "0.00387100"
+   },
+   {
+   "symbol": "BNBBTC",
+   "price": "0.00663030"
+   },
+   {
+   "symbol": "NEOBTC",
+   "price": "0.00106600"
+   },
+   {
+   "symbol": "QTUMETH",
+   "price": "0.00822000"
+   },
+   . 
+   .
+   .
+]
 ```
 
 ### Current price of spesific coins
@@ -72,26 +75,28 @@ GET /api/v1/subCoins
 
 **Response**
 ```javascript
-{
-"symbol": "ETHBTC",
-"price": "0.03508800"
-},
-{
-"symbol": "LTCBTC",
-"price": "0.00387100"
-},
-{
-"symbol": "BNBBTC",
-"price": "0.00663030"
-},
-{
-"symbol": "XRPBTC",
-"price": "0.03508800"
-},
-{
-"symbol": "BCHBTC",
-"price": "0.00387100"
-},
+[
+   {
+   "symbol": "ETHBTC",
+   "price": "0.03508800"
+   },
+   {
+   "symbol": "LTCBTC",
+   "price": "0.00387100"
+   },
+   {
+   "symbol": "BNBBTC",
+   "price": "0.00663030"
+   },
+   {
+   "symbol": "XRPBTC",
+   "price": "0.03508800"
+   },
+   {
+   "symbol": "BCHBTC",
+   "price": "0.00387100"
+   }
+]
 ```
 
 ### Current average price
