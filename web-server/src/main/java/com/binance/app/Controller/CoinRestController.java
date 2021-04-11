@@ -6,9 +6,9 @@ import com.binance.app.Model.Coin;
 import com.binance.app.Repository.SubCoinRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -62,8 +62,12 @@ public class CoinRestController {
     public ResponseEntity<?> fetchAllBTC() throws JSONException {
         String url = "https://api.binance.com/api/v3/ticker/price";
         //returns List of JSON objects -> {"symbol": "SOMEBTC", "price": "price"}
-        Object[] data = restTemplate.getForObject(url, Object[].class); // json directly?
+        Object[] data = restTemplate.getForObject(url, Object[].class);
         assert data != null;
+
+        /* TO DO
+         * Mapping objects instead of using json
+         */
         //converts obj to json array
         JSONArray obj = new JSONArray(data);
         //json parse
